@@ -37,6 +37,11 @@
       </nav>
     </div>
 
+    <div class='messages'>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
       <%= yield %>
 
   </div> <!-- wrap -->
@@ -46,9 +51,10 @@
       <div class="col-md-3 col-md-offset-9">
         <ul class="list-unstyled">
           <li><%= link_to "(this is in the footer) About", welcome_about_path %></li>
+          <li><%= link_for_admins %></li>
         </ul>
       </div>
     </div>
-
+  </div>
 </body>
 </html>
