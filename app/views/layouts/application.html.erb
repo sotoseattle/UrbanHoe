@@ -9,6 +9,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
   <div id="main-container" class="container">
     <div class="nav nav-tabs pull-right col-md-12">
       <li><%= link_to "Home", root_path %></li>
@@ -17,6 +20,10 @@
     <div>
       <%= yield %>
     </div>
+  </div>
+
+  <div>
+    Footer: <%= link_for_admins %>
   </div>
 </body>
 </html>

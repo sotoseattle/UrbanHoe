@@ -11,6 +11,6 @@ AllCops:
     - lib/tasks/*
   Exclude:
     - db/schema.rb
-    - db/migrations
+    - db/migrate/*
     - vendor/bundle
     - bin/**/*
