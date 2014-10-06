@@ -206,6 +206,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   minitest-rails-capybara
+  nokogiri
   pg
   poltergeist
   pry-rails
