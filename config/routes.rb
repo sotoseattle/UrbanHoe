@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :plants
+
   root 'welcome#index'
 
   get 'welcome/about'

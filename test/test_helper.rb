@@ -9,6 +9,7 @@ require 'capybara/poltergeist'
 
 module ActiveSupport
   class TestCase
+    ActiveRecord::Migration.check_pending!
     fixtures :all
     Capybara.javascript_driver = :poltergeist
   end
