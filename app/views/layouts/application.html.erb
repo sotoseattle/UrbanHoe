@@ -57,7 +57,7 @@
             <li>Hello, <%= current_user.email %></li>
             <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
           <% else %>
-            <li><%= link_to 'Admin', new_user_session_path, class: "light-link" %></li>
+            <li><%= link_to 'WebMaster', new_user_session_path, class: "light-link" %></li>
 
           <% end %>
         </ul>
