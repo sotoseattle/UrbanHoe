@@ -1,5 +1,8 @@
 class PlantsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
+
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   # GET /plants
   def index
@@ -47,12 +50,17 @@ class PlantsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_plant
-      @plant = Plant.find(params[:id])
-    end
+  def set_plant
+    @plant = Plant.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def plant_params
-      params.require(:plant).permit(:plant_name, :instructions)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def plant_params
+    params.require(:plant).permit(:plant_name, :instructions)
+  end
+
+  def user_not_authorized
+    flash[:error] = 'You are not authorized to perform this action'
+    redirect_to(root_path)
+  end
 end

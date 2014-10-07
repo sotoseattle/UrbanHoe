@@ -2,6 +2,7 @@ require "test_helper"
 
 feature 'When I go to the plant page' do
   scenario 'it should be created' do
+    sign_in
     visit plants_path
     click_on 'New Plant'
     fill_in 'plant_plant_name', with: 'Beefsteak Tomato'
@@ -17,6 +18,7 @@ feature 'When I go to the plant page' do
   end
 
   scenario 'it should be editable' do
+    sign_in
     visit plants_path
     click_on 'New Plant'
     fill_in 'plant_plant_name', with: 'Not Beets'

@@ -12,5 +12,14 @@ module ActiveSupport
     ActiveRecord::Migration.check_pending!
     fixtures :all
     Capybara.javascript_driver = :poltergeist
+
+    def sign_in
+      visit '/'
+      click_on 'WebMaster'
+
+      fill_in 'Email', with: 'admin@urbanhoe.com'
+      fill_in 'Password', with: 'password'
+      click_on 'Log in'
+    end
   end
 end
