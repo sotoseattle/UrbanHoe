@@ -4,6 +4,7 @@ module ApplicationHelper
       content_tag(:div) do
         content_tag(:li, "Hello, #{current_user.email}") +
         content_tag(:li, link_to('New Plant', new_plant_path)) +
+        content_tag(:li, link_to('All Plants', plants_path)) +
         content_tag(:li, link_to('Log out', destroy_user_session_path, method: 'delete'))
       end
     else
