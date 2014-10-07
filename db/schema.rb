@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141007182942) do
     t.datetime "updated_at"
     t.integer  "region"
     t.string   "season"
+    t.string   "image"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
