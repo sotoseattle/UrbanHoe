@@ -122,8 +122,6 @@ GEM
     pry-rescue (1.4.1)
       interception (>= 0.5)
       pry
-    pundit (0.3.0)
-      activesupport (>= 3.0.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -214,7 +212,6 @@ DEPENDENCIES
   poltergeist
   pry-rails
   pry-rescue
-  pundit
   rails (= 4.1.6)
   rails_12factor
   rubocop
