@@ -6,7 +6,7 @@ feature 'When I go to the plant page' do
     visit plants_path
     click_on 'New Plant'
     save_and_open_page
-    click_on(input_id='plant_avatar')
+    click_on(id='plant_avatar')
     attach_file('Bear.jpg', '/public/images/bear.jpg')
     fill_in 'Plant name', with: 'Beefsteak Tomato'
     fill_in 'Instructions', with: ('Kitten Ipsum Baxter, wonderful likes give me

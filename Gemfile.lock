@@ -50,6 +50,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-extensions (0.2.0)
+      capybara
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cliver (0.3.2)
@@ -215,6 +217,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 3.2.0)
+  capybara-extensions
   coffee-rails (~> 4.0.0)
   devise
   faker

@@ -5,6 +5,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/rails/capybara'
 require 'capybara/poltergeist'
+require 'capybara-extensions'
 # require 'pry-rescue/minitest'
 
 module ActiveSupport
