@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
+<% if @plant.avatar.exists? %>
+  <%= image_tag @plant.avatar%>
+<% else %>
+  <%=(image_tag ('/images/bear.jpg'))%>
+<% end %>
+<!-- <p><%= image_tag @plant.avatar.url(:medium) %></p> -->
 <p><%= @plant.plant_name %></p> </br>
 <p><%= @plant.instructions %></p>
+<p><%= @plant.region %></p>
+<p><%= @plant.season %></p>
 
 <%= link_to 'Edit', edit_plant_path(@plant) %> |
 <%= link_to 'All Plants', plants_path %>

@@ -18,7 +18,7 @@ class PlantsController < ApplicationController
   end
 
   def create
-    @plant = Plant.new(plant_params)
+    @plant = Plant.create(plant_params)
 
     if @plant.save
       redirect_to @plant, notice: 'Plant was successfully created.'
@@ -48,7 +48,7 @@ class PlantsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def plant_params
-    params.require(:plant).permit(:plant_name, :instructions)
+    params.require(:plant).permit(:plant_name, :instructions, :avatar)
   end
 
   def user_not_authorized
