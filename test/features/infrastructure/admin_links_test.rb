@@ -38,3 +38,17 @@ feature 'As an admin, when visiting the home page' do
     page.must_have_content 'All Edible Plants'
   end
 end
+
+feature 'As an admin when adding new plants to the database' do
+  scenario('I want to be able to easily add information using a
+  nicely designed interface') do
+    visit '/'
+    click_on 'WebMaster'
+    fill_in 'Email', with: 'admin@urbanhoe.com'
+    fill_in 'Password', with: 'password'
+    click_on 'Log in'
+    click_on 'New Plant'
+    page.must_have_content 'Region'
+    page.must_have_content 'Season'
+  end
+end
