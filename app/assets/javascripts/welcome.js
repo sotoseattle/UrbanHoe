@@ -8,9 +8,13 @@ var zip = {
       url: '/welcome/hardiness_region_for',
       type: 'get',
       data: {zipo: zipcode},
-      success: function(data){ $('#hardregion').html(data) },
+      success: function(data){
+        $('#hardregion').val(data);
+        $('#hhregion').val(data);
+      },
       error: function(){
-        $('#hardregion').html('Unrecognized Zipcode');
+        $('#hardregion').val(0);
+        $('#hhregion').val(0);
       }
     })
   },
@@ -44,4 +48,8 @@ $(function () {
       error: function(){ $('#plants_details').html(''); }
     });
   })
+
+  $( ".target" ).change(function(event) {
+    $('#hhregion').val(event.target.value);
+  });
 })

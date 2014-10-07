@@ -2,7 +2,12 @@ class WelcomeController < ApplicationController
   require 'open-uri'
 
   def index
-    @plants = Plant.all
+    reg = params[:hhregion].to_i
+    if reg==0
+      @plants = Plant.all
+    else
+      @plants = Plant.where(region: reg)
+    end
   end
 
   def about
