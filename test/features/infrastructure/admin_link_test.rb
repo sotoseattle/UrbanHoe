@@ -26,4 +26,15 @@ feature 'As an admin, when visiting the home page' do
     click_on 'New Plant'
     page.must_have_content 'New Plant'
   end
+
+  scenario('I want to be able to go to a page where i can easily see a list
+  of all plants in the database so I can easily edit and destroy them') do
+    visit '/'
+    click_on 'WebMaster'
+    fill_in 'Email', with: 'admin@urbanhoe.com'
+    fill_in 'Password', with: 'password'
+    click_on 'Log in'
+    click_on 'All Plants'
+    page.must_have_content 'All Edible Plants'
+  end
 end
