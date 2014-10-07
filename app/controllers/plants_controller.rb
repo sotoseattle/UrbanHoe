@@ -45,14 +45,13 @@ class PlantsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
   def set_plant
     @plant = Plant.find(params[:id])
   end
 
-  # Only allow a trusted parameter "white list" through.
   def plant_params
-    params.require(:plant).permit(:plant_name, :instructions, :region, :season, :avatar)
+    params.require(:plant).permit(:plant_name, :instructions, :region, :season, :avatar_file_name, :image, :avatar_file_size, :avatar_content_type, :avatar_updated_at)
   end
 
   def user_not_authorized

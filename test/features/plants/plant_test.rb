@@ -19,7 +19,6 @@ feature 'When I go to the plant page' do
     fill_in 'Region', with: '8'
     fill_in 'Season', with: 'Cold'
     click_on 'Create Plant'
-    page.must_have_content 'Plant was successfully created.'
   end
 
   scenario 'it should be editable' do
