@@ -2,11 +2,11 @@ class WelcomeController < ApplicationController
   require 'open-uri'
 
   def index
-    reg = params[:hhregion].to_i
-    if reg==0
+    @reg = params[:hhregion].to_i
+    if @reg==0
       @plants = Plant.all
     else
-      @plants = Plant.where(region: reg)
+      @plants = Plant.where(region: @reg)
     end
   end
 
