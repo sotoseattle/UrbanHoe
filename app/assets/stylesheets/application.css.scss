@@ -6,8 +6,13 @@
  /* scss variable */
 
 
-/*@import 'bootstrap-sprockets';*/
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+/* move all content away from left edge of browser window */
+.container-fluid {
+margin-left: 25px;
+}
 
 .user-info {
   margin-top: 9px;
@@ -51,4 +56,10 @@ body {
 #footer {
   height: 60px;
   background-color: #f5f5f5;
+}
+
+/* Lighten admin sign-in link ---------------------*/
+
+a.light-link {
+  color: #e1dddd;
 }
