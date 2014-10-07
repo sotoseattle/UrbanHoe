@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'faker'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
