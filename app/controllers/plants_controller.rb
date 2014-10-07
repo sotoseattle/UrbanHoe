@@ -1,28 +1,22 @@
 class PlantsController < ApplicationController
-  before_action :authenticate_user!
+
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
 
-  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-
-  # GET /plants
   def index
     @plants = Plant.all
   end
 
-  # GET /plants/1
   def show
   end
 
-  # GET /plants/new
   def new
     @plant = Plant.new
   end
 
-  # GET /plants/1/edit
   def edit
   end
 
-  # POST /plants
   def create
     @plant = Plant.new(plant_params)
 
@@ -33,7 +27,6 @@ class PlantsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /plants/1
   def update
     if @plant.update(plant_params)
       redirect_to @plant, notice: 'Plant was successfully updated.'
@@ -42,7 +35,6 @@ class PlantsController < ApplicationController
     end
   end
 
-  # DELETE /plants/1
   def destroy
     @plant.destroy
     redirect_to plants_url, notice: 'Plant was successfully destroyed.'

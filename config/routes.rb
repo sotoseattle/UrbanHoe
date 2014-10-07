@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-
+  devise_for :users, skip: :registrations
   resources :plants
 
-  devise_for :users, skip: :registrations
+  get 'welcome/about'
+  get 'welcome/hardiness_region_for'
 
   root 'welcome#index'
-
-  get 'welcome/about'
 end
