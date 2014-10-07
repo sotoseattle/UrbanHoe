@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+  <%= render 'details' %>
+<% else %>
+  <%= render 'unauthorized.html.erb' %>
+<% end %>

@@ -42,7 +42,9 @@
       <p class="alert"><%= alert %></p>
     </div>
 
+    <div class="container-fluid">
       <%= yield %>
+    </div>
 
   </div> <!-- wrap -->
 
@@ -50,8 +52,7 @@
     <div class="container">
       <div class="col-md-3 col-md-offset-9">
         <ul class="list-unstyled">
-          <li><%= link_to "(this is in the footer) About", welcome_about_path %></li>
-          <li><%= link_for_admins %></li>
+          <%= link_for_admins %>
         </ul>
       </div>
     </div>
