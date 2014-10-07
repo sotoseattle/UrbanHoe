@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
   require 'open-uri'
 
   def index
+    @plants = Plant.all
   end
 
   def about
