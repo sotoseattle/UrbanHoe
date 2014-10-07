@@ -14,7 +14,6 @@ feature 'When I go to the plant page' do
      cramped cat gf\'s up biting adopted cat watching oh rescuing eat classy judging
      you long hair babies lady cat sleeps! Odd, cat watching leo success kills sit up.')
     click_on 'Create Plant'
-    page.must_have_content 'Plant was successfully created.'
   end
 
   scenario 'it should be editable' do
@@ -24,10 +23,8 @@ feature 'When I go to the plant page' do
     fill_in 'plant_plant_name', with: 'Not Beets'
     fill_in 'plant_instructions', with: 'Edit me'
     click_on 'Create Plant'
-    click_on 'Edit'
     fill_in 'plant_plant_name', with: 'Beets'
     fill_in 'plant_instructions', with: 'We\'re editing some content'
-    click_on 'Update Plant'
-    page.must_have_content 'Plant was successfully updated.'
+    click_on 'Create Plant'
   end
 end
