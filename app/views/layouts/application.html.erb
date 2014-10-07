@@ -52,14 +52,7 @@
     <div class="container">
       <div class="col-md-3 col-md-offset-9">
         <ul class="list-unstyled">
-          <li><%= link_to 'About', welcome_about_path %></li>
-          <% if current_user %>
-            <li>Hello, <%= current_user.email %></li>
-            <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
-          <% else %>
-            <li><%= link_to 'WebMaster', new_user_session_path, class: "light-link" %></li>
-
-          <% end %>
+          <%= link_for_admins %>
         </ul>
       </div>
     </div>
