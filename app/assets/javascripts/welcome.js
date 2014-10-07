@@ -8,7 +8,7 @@ var zip = {
       url: '/welcome/hardiness_region_for',
       type: 'get',
       data: {zipo: zipcode},
-      success: function(data){ $('#hardregion').append(data) },
+      success: function(data){ $('#hardregion').html(data) },
       error: function(){
         $('#hardregion').html('Unrecognized Zipcode');
       }
