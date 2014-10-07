@@ -55,11 +55,21 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: #dbe5a1;
 }
 
 /* Lighten admin sign-in link ---------------------*/
 
 a.light-link {
   color: #e1dddd;
+}
+
+/* Background colors -------------------------*/
+
+div.top-bar {
+  background-color: #f7ad64;
+}
+
+div.left-side {
+  background-color: #f5f5f5;
 }
