@@ -1,5 +1,9 @@
 <% if user_signed_in? %>
   <%= render 'details' %>
+  <div class='row'>
+    <%= link_to 'Edit', edit_plant_path(@plant) %> |
+    <%= link_to 'All Plants', plants_path %>
+  </div>
 <% else %>
   <%= render 'unauthorized.html.erb' %>
 <% end %>

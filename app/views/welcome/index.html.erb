@@ -10,15 +10,23 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
   <br>
   <div class="outputs">
     <div class="row">
       <div class='col-md-4 left-side'>
         <table id='plants'>
+=======
+
+  <div class='row'>
+    <div class='col-md-5'>
+      <table id='plants' class="table table-striped table-bordered"
+             cellspacing="0" width="100%">
+>>>>>>> click on row of plant list shows details
         <thead><th>Plant Name</th></thead>
         <tbody>
           <% @plants.each do |p| %>
-          <tr>
+          <tr id='<%= p.id %>'>
             <td>
               <%= p.plant_name %>
             </td>
@@ -26,10 +34,16 @@
           <% end %>
         </tbody>
       </table>
+<<<<<<< HEAD
       </div>
       <div class='col-md-8 right-side'>
         This is the right side of the page showing plant detail.
       </div>
+=======
+    </div>
+    <div id='plants_details' class='col-md-7'>
+      This is the other side of the page.
+>>>>>>> click on row of plant list shows details
     </div>
   </div>
 </div>

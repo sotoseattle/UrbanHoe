@@ -32,15 +32,19 @@ $(document).keypress(function(e) {
 
 $(function () {
   zip.turn_on_form();
-  $('#plants').dataTable({
-  // ajax: ...,
-  // autoWidth: false,
-  // pagingType: 'full_numbers',
-  // processing: true,
-  // serverSide: true,
 
-  // Optional, if you want full pagination controls.
-  // Check dataTables documentation to learn more about available options.
-  // http://datatables.net/reference/option/pagingType
-});
+  $('#plants').dataTable({});
+
+  $("#plants tbody tr").on("click", function(e){
+    var id = this.id
+    console.log(id);
+    $.ajax({
+      url: '/plants/plant_details/'+id,
+      type: 'get',
+      success: function(data){ $('#plants_details').html(data) },
+      error: function(){
+        $('#plants_details').html('Error');
+      }
+    });
+  });
 })

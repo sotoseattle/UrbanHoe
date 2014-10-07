@@ -1,7 +1,7 @@
 class PlantsController < ApplicationController
 
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_plant, only: [:show, :edit, :update, :destroy]
+  before_action :set_plant, only: [:show, :edit, :update, :destroy, :plant_details]
 
   def index
     @plants = Plant.all
@@ -38,6 +38,10 @@ class PlantsController < ApplicationController
   def destroy
     @plant.destroy
     redirect_to plants_url, notice: 'Plant was successfully destroyed.'
+  end
+
+  def plant_details
+    render partial: 'details'
   end
 
   private
