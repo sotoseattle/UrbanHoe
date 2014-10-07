@@ -32,4 +32,19 @@ $(document).keypress(function(e) {
 
 $(function () {
   zip.turn_on_form();
+
+  $('#plants').dataTable({});
+
+  $("#plants tbody tr").on("click", function(e){
+    var id = this.id
+    console.log(id);
+    $.ajax({
+      url: '/plants/plant_details/'+id,
+      type: 'get',
+      success: function(data){ $('#plants_details').html(data) },
+      error: function(){
+        $('#plants_details').html('Error');
+      }
+    });
+  });
 })

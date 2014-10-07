@@ -14,13 +14,23 @@
   <div class="outputs">
     <div class="row">
       <div class='col-md-4 left-side'>
-        Left Side Plant List
+        <table id='plants' class="table table-striped table-bordered"
+               cellspacing="0" width="100%">
+          <thead><th>Plant Name</th></thead>
+          <tbody>
+            <% @plants.each do |p| %>
+            <tr id='<%= p.id %>'>
+              <td>
+                <%= p.plant_name %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
-      <div class='col-md-8 right-side'>
+      <div id='plants_details' class='col-md-8 right-side'>
         This is the right side of the page showing plant detail.
       </div>
     </div>
   </div>
 </div>
-
-
