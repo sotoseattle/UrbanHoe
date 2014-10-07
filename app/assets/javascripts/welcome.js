@@ -33,18 +33,15 @@ $(document).keypress(function(e) {
 $(function () {
   zip.turn_on_form();
 
-  $('#plants').dataTable({});
+  var plantyTable = $('#plants').dataTable({});
 
-  $("#plants tbody tr").on("click", function(e){
-    var id = this.id
-    console.log(id);
+  $('#plants').on('click', 'tr', function(event) {
+    var id = this.id;
     $.ajax({
       url: '/plants/plant_details/'+id,
       type: 'get',
       success: function(data){ $('#plants_details').html(data) },
-      error: function(){
-        $('#plants_details').html('Error');
-      }
+      error: function(){ $('#plants_details').html(''); }
     });
-  });
+  })
 })
