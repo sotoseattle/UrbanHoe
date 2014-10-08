@@ -59,8 +59,7 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 60px;
-  background-color: #dbe5a1;
+  height: 30px;
 }
 
 .selector-nav {
@@ -84,11 +83,7 @@ a.light-link {
 
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
-   background-color: #FFE3C4;
+   background-color: #dbe5a1;
  }
 
-.table-striped>tbody>tr:nth-child(even)>td,
-.table-striped>tbody>tr:nth-child(even)>th {
-   background-color: #C4E0FF;
- }
 
