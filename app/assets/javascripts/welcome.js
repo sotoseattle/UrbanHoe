@@ -8,9 +8,13 @@ var zip = {
       url: '/welcome/hardiness_region_for',
       type: 'get',
       data: {zipo: zipcode},
-      success: function(data){ $('#hardregion').html(data) },
+      success: function(data){
+        $('#hardregion').val(data);
+        $('#hhregion').val(data);
+      },
       error: function(){
-        $('#hardregion').html('Unrecognized Zipcode');
+        $('#hardregion').val('0');
+        $('#hhregion').val('0');
       }
     })
   },
@@ -19,7 +23,7 @@ var zip = {
     $('input#mysubmit1').click(function(){
       zipcode = $('input#zipo').val();
       if (zip.is_valid(zipcode)) { zip.call_server_with_zipcode(zipcode) }
-      else { $('#hardregion').html('Invalid Zipcode'); }
+      else { $('#hardregion').html('Invalid Zipcode') }
     })
   }
 }
@@ -33,17 +37,39 @@ $(document).keypress(function(e) {
 $(function () {
   zip.turn_on_form();
 
-  var plantyTable = $('#plants').dataTable({});
+  $('#plants').dataTable({
+    pagingType: 'simple'
+  });
 
-  $('#plants').on('click', 'tr', function(event) {
+  var table = $('#plants').DataTable();
+  var lastCell = null;
+
+  $('#plants tbody').on('click', 'tr', function(event) {
     var id = this.id;
     $.ajax({
       url: '/plants/plant_details/'+id,
       type: 'get',
       success: function(data){ $('#plants_details').html(data) },
-      error: function(){ $('#plants_details').html(''); }
+      error: function(){ $('#plants_details').html('') }
     });
   })
+
+  $('#plants tbody').on('mouseover', 'td', function () {
+    if ( this !== lastCell ) {
+      $(this).addClass( 'highlight' );
+      $(lastCell).removeClass( 'highlight' );
+      lastCell = this;
+    }
+  })
+
+  $('#plants tbody').on( 'mouseleave', function () {
+    $( table.cells().nodes() ).removeClass( 'highlight' );
+  });
+
+  $( ".target" ).change(function(event) {
+    if (this.id=='hardregion') { $('#hhregion').val(event.target.value) }
+    else { $('#hseason').val(event.target.value) }
+  });
 })
 
 $(document).ready(function() {
