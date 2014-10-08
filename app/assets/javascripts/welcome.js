@@ -38,7 +38,9 @@ $(function () {
   zip.turn_on_form();
 
   $('#plants').dataTable({
-    pagingType: 'simple'
+    pagingType: 'simple',
+    iDisplayLength: 5,
+    "lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]]
   });
 
   var table = $('#plants').DataTable();
