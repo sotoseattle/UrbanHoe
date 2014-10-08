@@ -2,7 +2,18 @@ class WelcomeController < ApplicationController
   require 'open-uri'
 
   def index
-    @plants = Plant.all
+    @reg = params[:hhregion].to_i || 0
+    @sea = params[:hseason] || 'All'
+
+    query = {}
+    query[:region] = @reg if @reg!=0
+    query[:season] = @sea if @sea!='All'
+
+    if query.keys.empty?
+      @plants = Plant.all
+    else
+      @plants = Plant.where(query)
+    end
   end
 
   def about
