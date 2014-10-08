@@ -17,3 +17,6 @@
 
 # Ignore .DS_Store files
 .DS_Store
+
+# paperclip images
+/public/system/**/*
