@@ -1,5 +1,4 @@
 class PlantsController < ApplicationController
-
   before_action :authenticate_user!, except: [:index, :show, :plant_details]
   before_action :set_plant, only: [:show, :edit, :update, :destroy, :plant_details]
 
@@ -19,7 +18,6 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.create(plant_params)
-
     if @plant.save
       redirect_to @plant, notice: 'Plant was successfully created.'
     else
