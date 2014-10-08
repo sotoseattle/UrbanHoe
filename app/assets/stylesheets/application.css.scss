@@ -60,6 +60,15 @@ body {
   background-color: #dbe5a1;
 }
 
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 6em;
+  z-index: 100;
+  border-top: 0;
+}
+
 /* Lighten admin sign-in link ---------------------*/
 
 a.light-link {
