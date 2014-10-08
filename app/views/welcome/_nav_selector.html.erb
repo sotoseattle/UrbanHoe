@@ -14,12 +14,13 @@
       <div class='col-md-8 right-side'>
         <p class='row'>
           <span> Zipcode:</span>
-          <input type='text' id='zipo' value='98102' />
+          <input type='text' id='zipo' value='zip' />
           <input type='submit' class="btn btn-large btn-success" id='mysubmit1' value='Go' />
-          <span> Region:</span>
+  <!--         <span> Region:</span>
           <%= select_tag(:hardregion, options_for_select([['All', '0'], ['1', '1'],
             ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'],
-            ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13']], @reg), class:'target') %>
+            ['9', '9'], ['10', '10'], ['11', '11'], ['12', '12'], ['13', '13']], @reg), class:'target') %> -->
+          <span id='hardregion'>All</span>
         </p>
       </div>
     </div>

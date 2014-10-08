@@ -9,11 +9,11 @@ var zip = {
       type: 'get',
       data: {zipo: zipcode},
       success: function(data){
-        $('#hardregion').val(data);
+        $('#hardregion').text(data);
         $('#hhregion').val(data);
       },
       error: function(){
-        $('#hardregion').val(0);
+        $('#hardregion').text(0);
         $('#hhregion').val('0');
       }
     })
@@ -24,7 +24,7 @@ var zip = {
       zipcode = $('input#zipo').val();
       if (zip.is_valid(zipcode)) { zip.call_server_with_zipcode(zipcode) }
       else {
-        $('#hardregion').val(0)
+        $('#hardregion').text(0)
         $('#hhregion').val('0');
       }
     })
