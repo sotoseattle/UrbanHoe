@@ -23,7 +23,7 @@ var zip = {
     $('input#mysubmit1').click(function(){
       zipcode = $('input#zipo').val();
       if (zip.is_valid(zipcode)) { zip.call_server_with_zipcode(zipcode) }
-      else { $('#hardregion').html('Invalid Zipcode'); }
+      else { $('#hardregion').html('Invalid Zipcode') }
     })
   }
 }
@@ -45,11 +45,12 @@ $(function () {
       url: '/plants/plant_details/'+id,
       type: 'get',
       success: function(data){ $('#plants_details').html(data) },
-      error: function(){ $('#plants_details').html(''); }
+      error: function(){ $('#plants_details').html('') }
     });
   })
 
   $( ".target" ).change(function(event) {
-    $('#hhregion').val(event.target.value);
+    if (this.id=='hardregion') { $('#hhregion').val(event.target.value) }
+    else { $('#hseason').val(event.target.value) }
   });
 })
