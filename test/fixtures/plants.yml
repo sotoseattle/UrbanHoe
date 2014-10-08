@@ -1,13 +1,25 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-
 plant_1:
-  plant_name: Orange
-  instructions: I like to be in warm climates
+  plant_name: beans
+  description: 'Also known as string beans, these are you basic green beans'
+  planting: 'You will never find baby bean plants for sale, so you have no choice but to grow your own from seed. Plant seeds directly in the container but wait until the weather is really warm. Space seeds 4 inches apart and 1 inch deep'
+  harvesting: 'Over the full growing season you can expect to harvest approximatedly 1 gallon of beans (the full pods) from each plant of the bush type and 2 gallons from each of the pole ones'
+  varieties: 'Pole beans: Blue Lake (60 days), Kentucky Blue (65 days), Cascade Giant (60 days). Bush beans: Blue Lagoon (60 days), Bush Blue Lake (60 days), Tendercrop (54 days)'
+  region: '4, 5, 6, 7, 8, 9'
+  season: 'mid to late Summer'
+  plant_size: 'pole beans grow up to 8 feet, bush beans 12 to 18 inches'
+  minimum_soil_depth_inches: '6'
+  grow_as: 'Annuals'
+  family: 'Veggie'
 
 plant_2:
-  plant_name: Peppers
-  instructions: I like super hot climates
+  plant_name: kale
+  description: 'A leafy green with hearty flavored leaves'
+  planting: 'As soon as nighttime temps are no longer cold. Plant seeds in clusters 1/4 inch deep, space clusters a bit dependeing on how soon intend to harvest'
+  harvesting: 'As soon as they pop up for baby leaves, but dont wait too much or the leaves will be tough and hardy'
+  varieties: 'Red Giant (45 days), Osaka Purple (45 days)'
+  region: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13'
+  season: 'Late Spring through Winter'
+  plant_size: '4 to 24 inches'
+  minimum_soil_depth_inches: '8'
+  grow_as: 'Annuals'
+  family: 'Veggie'
