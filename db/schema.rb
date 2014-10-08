@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141007182942) do
+ActiveRecord::Schema.define(version: 20141007215458) do
 
   create_table "plants", force: true do |t|
     t.string   "plant_name"
     t.text     "instructions"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "region"
+    t.string   "region"
     t.string   "season"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
