@@ -13,8 +13,8 @@ var zip = {
         $('#hhregion').val(data);
       },
       error: function(){
-        $('#hardregion').val(0);
-        $('#hhregion').val(0);
+        $('#hardregion').val('0');
+        $('#hhregion').val('0');
       }
     })
   },
