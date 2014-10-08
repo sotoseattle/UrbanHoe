@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141007215458) do
+ActiveRecord::Schema.define(version: 20141008171117) do
 
   create_table "plants", force: true do |t|
     t.string   "plant_name"
-    t.text     "instructions"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "region"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20141007215458) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "planting"
+    t.string   "harvesting"
+    t.string   "varieties"
+    t.string   "plant_size"
+    t.integer  "minimum_soil_depth_inches"
+    t.string   "grow_as"
+    t.string   "family"
   end
 
   create_table "users", force: true do |t|

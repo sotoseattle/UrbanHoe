@@ -12,7 +12,8 @@
 
 /* move all content away from left edge of browser window */
 .container-fluid {
-margin-left: 25px;
+  margin-left: 25px;
+  padding-top: 7em;
 }
 
 .user-info {
@@ -24,14 +25,17 @@ margin-left: 25px;
 }
 
 .error {
- color: red;
+  color: red;
 }
 
 
 /* navbar ---------------------------- */
 .navbar-default {
-    background-color: #D1C69B;
-    border-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.radio_to_image {
+  text-align: center;
 }
 
 /* Sticky footer styles
@@ -40,7 +44,6 @@ margin-left: 25px;
 html,
 body {
   height: 100%;
-  background-color: #D1C69B;
   /* The html and body elements cannot have any padding or margin. */
 }
 
@@ -56,17 +59,17 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 60px;
-  background-color: #dbe5a1;
+  height: 30px;
 }
 
-.sticky {
+.selector-nav {
   position: fixed;
   width: 100%;
   left: 0;
-  top: 6em;
-  z-index: 100;
+  top: 0;
   border-top: 0;
+  padding-bottom: 2px;
+  z-index: 100;
 }
 
 /* Lighten admin sign-in link ---------------------*/
@@ -77,24 +80,10 @@ a.light-link {
 
 /* Background colors -------------------------*/
 
-div.top-bar {
-  background-color: #f7ad64;
-}
-
-div.left-side {
-  background-color: #f5f5f5;
-}
-
-div.col-md-5.left-side {
-  background-color: #f7ad64;
-}
 
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
-   background-color: #FFE3C4;
+   background-color: #dbe5a1;
  }
 
-.table-striped>tbody>tr:nth-child(even)>td,
-.table-striped>tbody>tr:nth-child(even)>th {
-   background-color: #C4E0FF;
- }
+

@@ -1,8 +1,6 @@
 class AddAttachmentAvatarToPlants < ActiveRecord::Migration
   def self.up
-    change_table :plants do |t|
-      t.attachment :avatar
-    end
+    add_attachment :plants, :avatar
   end
 
   def self.down
