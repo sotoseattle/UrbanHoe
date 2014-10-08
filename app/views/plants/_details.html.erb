@@ -1,11 +1,64 @@
 <p id="notice"><%= notice %></p>
-<% if @plant.avatar.exists? %>
-  <%= image_tag @plant.avatar%>
-<% else %>
-  <%=(image_tag ('/images/bear.jpg'))%>
-<% end %>
-<p><%= @plant.plant_name %></p>
-</br>
-<p><%= @plant.description %></p>
-<p><%= @plant.region %></p>
-<p><%= @plant.season %></p>
+<article>
+  <div class="row col-md-12", align="center">
+    <h3 style="text-decoration: underline"><%= @plant.plant_name %></h3>
+    <p>
+      <strong>Varieties: </strong>
+      <%= @plant.varieties %>
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-md-5 left-side">
+      <p>
+        <strong>Region: </strong>
+        <%= @plant.region %>
+      </p>
+      <p>
+        <strong>Season: </strong>
+        <%= @plant.season %>
+      </p>
+      <p>
+        <strong>Family: </strong>
+        <%= @plant.family %>
+      </p>
+    </div>
+    <div class="col-md-7 right-side">
+      <p>
+        <strong>Plant Size: </strong>
+        <%= @plant.plant_size %>
+      </p>
+      <p>
+        <strong>Minimum Planting Depth: </strong>
+        <%= @plant.minimum_soil_depth_inches %>
+      </p>
+      <p>
+        <strong>Grow As: </strong>
+        <%= @plant.grow_as %>
+      </p>
+    </div>
+  </div>
+
+  <section class="row", style="padding-top: 1em">
+    <div class="col-md-5 left-side", background-color="#D1C69B">
+      <% if @plant.avatar.exists? %>
+        <%= image_tag @plant.avatar%>
+      <% else %>
+        <%=(image_tag ('/images/bear.jpg'))%>
+      <% end %>
+    </div>
+    <div class="col-md-7 right-side">
+      <p>
+        <strong>Description: </strong>
+        <%= @plant.description %>
+      </p>
+      <p>
+        <strong>Planting: </strong>
+        <%= @plant.planting %>
+      </p>
+      <p>
+        <strong>Haversting: </strong>
+        <%= @plant.harvesting %>
+      </p>
+    </div>
+  </section>
+</article>
