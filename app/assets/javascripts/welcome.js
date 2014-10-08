@@ -37,9 +37,14 @@ $(document).keypress(function(e) {
 $(function () {
   zip.turn_on_form();
 
-  var plantyTable = $('#plants').dataTable({});
+  $('#plants').dataTable({
+    pagingType: 'simple'
+  });
 
-  $('#plants').on('click', 'tr', function(event) {
+  var table = $('#plants').DataTable();
+  var lastCell = null;
+
+  $('#plants tbody').on('click', 'tr', function(event) {
     var id = this.id;
     $.ajax({
       url: '/plants/plant_details/'+id,
@@ -48,6 +53,18 @@ $(function () {
       error: function(){ $('#plants_details').html('') }
     });
   })
+
+  $('#plants tbody').on('mouseover', 'td', function () {
+    if ( this !== lastCell ) {
+      $(this).addClass( 'highlight' );
+      $(lastCell).removeClass( 'highlight' );
+      lastCell = this;
+    }
+  })
+
+  $('#plants tbody').on( 'mouseleave', function () {
+    $( table.cells().nodes() ).removeClass( 'highlight' );
+  });
 
   $( ".target" ).change(function(event) {
     if (this.id=='hardregion') { $('#hhregion').val(event.target.value) }
