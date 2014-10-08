@@ -52,7 +52,7 @@ $(function () {
       url: '/plants/plant_details/'+id,
       type: 'get',
       success: function(data){ $('#plants_details').html(data) },
-      error: function(){ $('#plants_details').html('') }
+      error: function(){ $('#plants_details').html  ('') }
     });
   })
 
@@ -74,17 +74,5 @@ $(function () {
   });
 })
 
-$(document).ready(function() {
-  var stickyNavTop = $('.selector-nav').offset().top;
-  var stickyNav = function(){
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop > stickyNavTop - 85 ) {
-      $('.selector-nav').addClass('sticky');
-    } else {
-      $('.selector-nav').removeClass('sticky');
-    }
-  };
-  stickyNav();
-  $(window).scroll(function() { stickyNav(); });
-});
+
 
