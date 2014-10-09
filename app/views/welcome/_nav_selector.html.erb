@@ -19,11 +19,12 @@
       <div class='col-md-3 left-side'>
         <%=(image_tag ('/images/header-1.png')) %>
       </div>
-      <div class='col-md-9 right-side yy'>
-        <br>
-        <label for='zipo'>Zipcode</label>
-        <input type='text' id='zipo' value='zip' size=9/>
-        <input type='submit' class="btn btn-large btn-success" id='mysubmit1' value='Go' />
+
+      <div class='col-md-9 right-side xx' >
+        <!-- <span> Zipcode:</span> -->
+        <label for='zipo' class='col-md-4'>Zipcode</label>
+        <input type='text' id='zipo' class='col-md-4' value='zip' size=9/>
+        <input type='submit' class="col-md-4 btn btn-large btn-success" id='mysubmit1' value='Go' />
       </div>
     </div>
 
@@ -38,14 +39,17 @@
               <%= label_tag(:family_all, 'All') %>
               <p><%= radio_button_tag :family, 'All', radio_truthy('All'), class:'target' %></p>
             </td>
+
             <td class='col-md-3'>
               <%= label_tag(:family_veggie, 'Veggie') %>
               <p><%= radio_button_tag :family, 'Veggie', radio_truthy('Veggie'), class:'target' %></p>
             </td>
+
             <td class='col-md-3'>
               <%= label_tag(:family_fruit, 'Fruit') %>
               <p><%= radio_button_tag :family, 'Fruit', radio_truthy('Fruit'), class:'target' %></p>
             </td>
+
             <td class='col-md-3'>
               <%= label_tag(:family_herb, 'Herb') %>
               <p><%= radio_button_tag :family, 'Herb', radio_truthy('Herb'), class:'target' %></p>
@@ -60,8 +64,7 @@
         <%=(image_tag ('/images/header-3.png'))%>
         <%= hidden_field_tag(:hhregion, @reg) %>
         <%= hidden_field_tag(:hfamily, @fam) %>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= submit_tag('Dig It!', class:'btn btn-default btn-lg') %>
+        <%= submit_tag("Dig") %>
       <% end %>
     </div>
   </div>

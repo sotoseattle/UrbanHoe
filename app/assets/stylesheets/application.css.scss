@@ -11,14 +11,13 @@
 
 @media (min-width: 801px) {
   .sticky {
-    position: fixed;
     z-index: 100;
     border-top: 0;
+    margin-right: 15px;
     margin-bottom: 20px;
   }
 
   div.row.selector-nav {
-    position: fixed;
     width: 100%;
     left: 0;
     top: 0;
@@ -28,7 +27,6 @@
   }
 
   div.container-fluid {
-    padding-top: 8.25em;
   }
 }
 
@@ -36,6 +34,12 @@
   .container-fluid {
     padding-top: 0;
   }
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  height: 0;
 }
 
 /* move all content away from left edge of browser window */
@@ -97,7 +101,7 @@ body {
       font-size: 0.8em;
     }
     .f2 {
-      text-align: rigth;
+      text-align: right;
     }
   }
 }
