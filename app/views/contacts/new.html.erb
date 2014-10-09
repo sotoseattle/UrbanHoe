@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2" id="contact">
+      <h2 class="copy-heading text-center">Contact Us</h2>
+
+
+          <div class="contact-capsule">
+          <br>
+            <%= simple_form_for @contact do |f| %>
+              <% if @contact.errors.any? %>
+                <div class="error_messages">
+                  <h3><%= pluralize(@contact.errors.count, "error") %> prohibited this message from being saved:</h3>
+                  <ul>
+                    <% @contact.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+
+                </div>
+              <% end %>
+
+
+            <%=f.input :name, label: "Name", :input_html => {:maxlength => 35, :size => 35} %>
+            <%=f.input :email, label: "Email", :input_html => {:maxlength => 35, :size => 35} %>
+            <%#f.input :subject, label: "Subject", :input_html => {:maxlength => 50, :size => 50} %>
+            <%= f.input :body, as: :text, :input_html => { :rows => 10, class:"col-md-11"}, label: "Message"  %>
+            <%= f.button :submit, "Send" %>
+
+            <% end %>
+
+          </div>
+
+    </div>
+  </div>
+</div>

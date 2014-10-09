@@ -20,3 +20,9 @@
 
 # paperclip images
 /public/system/**/*
+
+# for contact mailer
+.env
+Procfile
+
+
