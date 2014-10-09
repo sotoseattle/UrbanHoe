@@ -40,8 +40,8 @@
 
   <section class="row", style="padding-top: 1em">
     <div class="col-md-5 left-side", background-color="#D1C69B">
-      <% if @plant.avatar.exists? %>
-        <%= image_tag @plant.avatar%>
+      <% if @plant.image? %>
+        <%= image_tag @plant.image%>
       <% else %>
         <%=(image_tag ('/images/bear.jpg'))%>
       <% end %>
