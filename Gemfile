@@ -16,6 +16,8 @@ gem "paperclip", "~> 4.2"
 gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'simple_form'
+gem 'active_attr', '~> 0.8.3'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -35,6 +37,10 @@ end
 
 group :test do
   gem 'minitest-rails-capybara'
+end
+
+group :development, :test do
+  gem 'foreman'
 end
 
 group :production do
