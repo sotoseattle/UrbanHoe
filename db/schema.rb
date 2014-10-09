@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006195628) do
+ActiveRecord::Schema.define(version: 20141009184536) do
 
   create_table "plants", force: true do |t|
     t.string   "plant_name"
-    t.text     "instructions"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "region"
+    t.string   "season"
+    t.string   "planting"
+    t.string   "harvesting"
+    t.string   "varieties"
+    t.string   "plant_size"
+    t.integer  "minimum_soil_depth_inches"
+    t.string   "grow_as"
+    t.string   "family"
+    t.string   "image"
   end
 
   create_table "users", force: true do |t|

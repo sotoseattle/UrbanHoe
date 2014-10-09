@@ -1,37 +1,73 @@
  /*
  *= require_tree .
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
  *= require_self
  */
 
  /* scss variable */
 
-
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+@media (min-width: 801px) {
+  .sticky {
+    z-index: 100;
+    border-top: 0;
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+
+  div.row.selector-nav {
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-top: 0;
+    padding-bottom: 2px;
+    z-index: 100;
+  }
+
+  div.container-fluid {
+  }
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+  .container-fluid {
+    padding-top: 0;
+  }
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
 /* move all content away from left edge of browser window */
 .container-fluid {
-margin-left: 25px;
+  margin: 0;
+  padding: 0;
+  margin-left: 25px;
 }
 
 .user-info {
   margin-top: 9px;
 }
 
-.nav {
-  margin-top: 5px;
+.selector-nav {
+  z-index: -10;
+  background-color: white;
 }
 
 .error {
- color: red;
+  color: red;
 }
 
 
 /* navbar ---------------------------- */
 .navbar-default {
-    background-color: #ffffff;
-    border-color: #ffffff;
+  border-color: #ffffff;
 }
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -54,12 +90,49 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 60px;
-  background-color: #f5f5f5;
+  height: 30px;
+  padding-top: 20px;
+  background-color: white;
+
+  .ff {
+    position: relative;
+    .f1 {
+      text-align: left;
+      font-size: 0.8em;
+    }
+    .f2 {
+      text-align: right;
+    }
+  }
 }
 
 /* Lighten admin sign-in link ---------------------*/
 
 a.light-link {
   color: #e1dddd;
+}
+
+/* Background colors -------------------------*/
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #dbe5a1;
+}
+
+
+
+
+
+
+.xx {
+
+
+  .yy {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  .z {
+    height: 100%;
+  }
 }

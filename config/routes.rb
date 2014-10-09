@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, skip: :registrations
+
+  get 'plants/plant_details/:id', to: 'plants#plant_details'
   resources :plants
 
   get 'welcome/about'

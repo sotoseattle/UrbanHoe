@@ -1,5 +1,9 @@
 <% if user_signed_in? %>
   <%= render 'details' %>
+  <div class='row'>
+    <%= link_to 'Edit', edit_plant_path(@plant) %> |
+    <%= link_to 'Delete', plant_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
 <% else %>
   <%= render 'unauthorized.html.erb' %>
 <% end %>
