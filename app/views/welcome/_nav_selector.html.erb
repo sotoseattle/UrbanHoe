@@ -1,9 +1,14 @@
 <div class='row entry_form'>
   <div class='row'>
-    <p class='col-md-8'>
-      <%=(image_tag ('/images/header-logo.png')) %>
+    <p class='col-md-10' style="display: block-inline;">
+      <p class='col-md-4 left-side'>
+        <%=(image_tag ('/images/header-logo.png')) %>
+      </p>
+      <p class='col-md-4 right-side'>
+        <%=(image_tag ('/images/header-logo2.png')) %>
+      </p>
     </p>
-    <p class='col-md-4' align='right'>
+    <p class='col-md-2' align='right'>
       <%= link_to 'About', welcome_about_path %>
     </p>
   </div>

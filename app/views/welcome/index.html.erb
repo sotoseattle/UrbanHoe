@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row selector-nav">
-    <div class='col-md-12 top-bar'>
+    <div id='header' class='col-md-12 top-bar'>
       <%= render 'nav_selector' %>
     </div>
   </div>
@@ -25,8 +25,12 @@
           </tbody>
         </table>
       </div>
-      <div id='plants_details' class='col-md-7 right-side'>
-      </div>
+      <section class='col-md-7 right-side', style='position: relative;'>
+        <div style='display: block;'>
+          <div id='plants_details' class='sticky'>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

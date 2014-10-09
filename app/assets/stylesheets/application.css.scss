@@ -6,22 +6,52 @@
 
  /* scss variable */
 
-
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+@media (min-width: 800px) {
+  .sticky {
+    position: fixed;
+    z-index: 100;
+    border-top: 0;
+    margin-bottom: 20px;
+  }
+
+  div.row.selector-nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-top: 0;
+    padding-bottom: 2px;
+    z-index: 100;
+  }
+
+  .container-fluid {
+    padding-top: 6.5em;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+  .container-fluid {
+    padding-top: 0;
+  }
+}
+
 /* move all content away from left edge of browser window */
 .container-fluid {
+  margin: 0;
+  padding: 0;
   margin-left: 25px;
-  padding-top: 7em;
 }
 
 .user-info {
   margin-top: 9px;
 }
 
-.nav {
-  margin-top: 5px;
+.selector-nav {
+  z-index: -10;
+  background-color: white;
 }
 
 .error {
@@ -34,9 +64,6 @@
   border-color: #ffffff;
 }
 
-.radio_to_image {
-  text-align: center;
-}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -60,16 +87,8 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 30px;
-}
-
-.selector-nav {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  border-top: 0;
-  padding-bottom: 2px;
-  z-index: 100;
+  padding-top: 20px;
+  background-color: white;
 }
 
 /* Lighten admin sign-in link ---------------------*/
