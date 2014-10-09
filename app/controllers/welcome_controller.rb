@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
     @reg = params[:hhregion] || '0'
 
     @plants = (@fam == 'All' ? Plant.all : Plant.where(family: @fam))
-    @plants = @plants.where("region LIKE ?", "% #{@reg}%") if @reg != '0'
+    @plants = @plants.where('region LIKE ?', "% #{@reg}%") if @reg != '0'
   end
 
   def about

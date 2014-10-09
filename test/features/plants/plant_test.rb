@@ -22,7 +22,7 @@ feature 'When I go to the plant page' do
   scenario 'it should be editable' do
     sign_in
     visit plants_path
-    page.find('table tbody tr', text: 'kale').find('a', text:'Edit').click
+    page.find('table tbody tr', text: 'kale').find('a', text: 'Edit').click
     fill_in 'Description', with: 'I hate kale!'
     click_on 'Update Plant'
     page.must_have_content 'Plant was successfully updated.'

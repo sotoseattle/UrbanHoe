@@ -12,7 +12,7 @@ gem 'jquery-rails'
 gem 'jquery-datatables-rails'
 gem 'jquery-ui-rails'
 gem 'nokogiri'
-gem "paperclip", "~> 4.2"
+gem 'paperclip', '~> 4.2'
 gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
