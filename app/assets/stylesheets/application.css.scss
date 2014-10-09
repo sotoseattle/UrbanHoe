@@ -11,14 +11,13 @@
 
 @media (min-width: 801px) {
   .sticky {
-    position: fixed;
     z-index: 100;
     border-top: 0;
+    margin-right: 15px;
     margin-bottom: 20px;
   }
 
   div.row.selector-nav {
-    position: fixed;
     width: 100%;
     left: 0;
     top: 0;
@@ -28,7 +27,6 @@
   }
 
   div.container-fluid {
-    padding-top: 8.25em;
   }
 }
 
@@ -36,6 +34,12 @@
   .container-fluid {
     padding-top: 0;
   }
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  height: 0;
 }
 
 /* move all content away from left edge of browser window */
@@ -89,6 +93,17 @@ body {
   height: 30px;
   padding-top: 20px;
   background-color: white;
+
+  .ff {
+    position: relative;
+    .f1 {
+      text-align: left;
+      font-size: 0.8em;
+    }
+    .f2 {
+      text-align: right;
+    }
+  }
 }
 
 /* Lighten admin sign-in link ---------------------*/
@@ -99,10 +114,25 @@ a.light-link {
 
 /* Background colors -------------------------*/
 
-
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
    background-color: #dbe5a1;
- }
+}
 
 
+
+
+
+
+.xx {
+
+
+  .yy {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  .z {
+    height: 100%;
+  }
+}

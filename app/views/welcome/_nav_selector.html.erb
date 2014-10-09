@@ -15,12 +15,12 @@
 </div>
 
   <div class='navegar'>
-    <div class='col-md-5 top-bar xx' style=>
+    <div class='col-md-4 top-bar xx' style=>
       <div class='col-md-3 left-side'>
         <%=(image_tag ('/images/header-1.png')) %>
       </div>
 
-      <div class='col-md-9 right-side xx'>
+      <div class='col-md-9 right-side xx' >
         <!-- <span> Zipcode:</span> -->
         <label for='zipo' class='col-md-4'>Zipcode</label>
         <input type='text' id='zipo' class='col-md-4' value='zip' size=9/>
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class='col-md-3 top-bar'>
+    <div class='col-md-4 top-bar'>
       <%= form_tag(root_path, method: "get") do %>
         <%=(image_tag ('/images/header-3.png'))%>
         <%= hidden_field_tag(:hhregion, @reg) %>

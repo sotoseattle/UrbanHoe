@@ -83,8 +83,12 @@ $(document).keypress(function(e) {
   }
 });
 
-$(function () {
+var ready;
+ready = function startup(){
   zip.turn_on_form();
   turn_on_table();
   change_listener();
-})
+}
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
