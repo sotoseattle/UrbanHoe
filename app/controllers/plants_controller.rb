@@ -49,7 +49,7 @@ class PlantsController < ApplicationController
   end
 
   def plant_params
-    params.require(:plant).permit(:plant_name, :instructions, :region, :season, :avatar)
+    params.require(:plant).permit(:plant_name, :instructions, :region, :season, :image)
   end
 
   def user_not_authorized
