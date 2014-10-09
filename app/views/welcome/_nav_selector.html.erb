@@ -1,6 +1,6 @@
 <div class='row entry_form'>
   <div class='row'>
-    <p class='col-md-10' style="display: block-inline;">
+    <p class='col-md-12' style="display: block-inline;">
       <p class='col-md-4 left-side'>
         <%=(image_tag ('/images/header-logo.png')) %>
       </p>
@@ -8,61 +8,63 @@
         <%=(image_tag ('/images/header-logo2.png')) %>
       </p>
     </p>
-    <p class='col-md-2' align='right'>
+    <p class='col-md-4' align='right'>
       <%= link_to 'About', welcome_about_path %>
     </p>
   </div>
+</div>
 
   <div class='navegar'>
-    <div class='col-md-4 top-bar xx'>
+    <div class='col-md-5 top-bar xx' style=>
       <div class='col-md-3 left-side'>
         <%=(image_tag ('/images/header-1.png')) %>
       </div>
 
       <div class='col-md-9 right-side xx'>
         <!-- <span> Zipcode:</span> -->
-        <label for='zipo'>Zipcode</label>
-        <input type='text' id='zipo' value='zip' size=9/>
-        <input type='submit' class="btn btn-large btn-success" id='mysubmit1' value='Go' />
+        <label for='zipo' class='col-md-4'>Zipcode</label>
+        <input type='text' id='zipo' class='col-md-4' value='zip' size=9/>
+        <input type='submit' class="col-md-4 btn btn-large btn-success" id='mysubmit1' value='Go' />
       </div>
     </div>
 
     <div class='col-md-4 top-bar'>
-      <div class='col-md-4 left-side'>
+      <div class='col-md-3 left-side'>
         <%=(image_tag ('/images/header-2.png'))%>
       </div>
-      <strong>Family:</strong>
-      <table class='radio_to_image col-md-8 right-side'>
-        <tr>
-          <td>
-            <%= label_tag(:family_all, 'All') %>
-            <p><%= radio_button_tag :family, 'All', radio_truthy('All'), class:'target' %></p>
-          </td>
+      <div class='col-md-9 right-side'>
+        <table>
+          <tr>
+            <td class='col-md-3'>
+              <%= label_tag(:family_all, 'All') %>
+              <p><%= radio_button_tag :family, 'All', radio_truthy('All'), class:'target' %></p>
+            </td>
 
-          <td>
-            <%= label_tag(:family_veggie, 'Veggie') %>
-            <p><%= radio_button_tag :family, 'Veggie', radio_truthy('Veggie'), class:'target' %></p>
-          </td>
+            <td class='col-md-3'>
+              <%= label_tag(:family_veggie, 'Veggie') %>
+              <p><%= radio_button_tag :family, 'Veggie', radio_truthy('Veggie'), class:'target' %></p>
+            </td>
 
-          <td>
-            <%= label_tag(:family_fruit, 'Fruit') %>
-            <p><%= radio_button_tag :family, 'Fruit', radio_truthy('Fruit'), class:'target' %></p>
-          </td>
+            <td class='col-md-3'>
+              <%= label_tag(:family_fruit, 'Fruit') %>
+              <p><%= radio_button_tag :family, 'Fruit', radio_truthy('Fruit'), class:'target' %></p>
+            </td>
 
-          <td>
-            <%= label_tag(:family_herb, 'Herb') %>
-            <p><%= radio_button_tag :family, 'Herb', radio_truthy('Herb'), class:'target' %></p>
-          </td>
-        </tr>
-      </table>
+            <td class='col-md-3'>
+              <%= label_tag(:family_herb, 'Herb') %>
+              <p><%= radio_button_tag :family, 'Herb', radio_truthy('Herb'), class:'target' %></p>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
 
-    <div class='col-md-4 top-bar'>
+    <div class='col-md-3 top-bar'>
       <%= form_tag(root_path, method: "get") do %>
         <%=(image_tag ('/images/header-3.png'))%>
         <%= hidden_field_tag(:hhregion, @reg) %>
         <%= hidden_field_tag(:hfamily, @fam) %>
-        <%= submit_tag("Fetch") %>
+        <%= submit_tag("Dig") %>
       <% end %>
     </div>
   </div>

@@ -9,7 +9,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .sticky {
     position: fixed;
     z-index: 100;
@@ -27,8 +27,8 @@
     z-index: 100;
   }
 
-  .container-fluid {
-    padding-top: 6.5em;
+  div.container-fluid {
+    padding-top: 8.25em;
   }
 }
 
