@@ -1,1 +1,44 @@
-<h3>UrbanHoe is a Seattle-based.....</h3>
+<div class='row'>
+  <p class='col-md-10' style="display: block-inline;">
+    <p class='col-md-4 left-side'>
+      <%=(image_tag ('/images/header-logo.png')) %>
+    </p>
+    <p class='col-md-4'>
+      <%=(image_tag ('/images/header-logo2.png')) %>
+    </p>
+  </p>
+  <p class='col-md-2' align='right'>
+    <%= link_to 'Home', root_path %>
+  </p>
+</div>
+
+<h3>About Us!</h3>
+</br>
+<section>
+  <h4>What is UrbanHoe?</h4>
+  <p>
+    This application is designed to be a simple, straightforward planting guide for
+    urban dwellers. The popularity of urban gardens is growing, and Urban Hoe wants to be
+    a go-to reference site for quick information about what can be planted and when.
+  </p>
+
+  <p>
+    Initially, we have conceptualized this app as a one page informational app.
+    Visitors to the site are immediately shown a large prompt near the top of the page
+    asking "Where do you live?", with a form box asking them for their zip code. The
+    response to this input will then present a dropdown list of plants, queried from
+    the database, appropriate for that region of the country.
+  </p>
+
+  <p>
+    Upon choosing a plant from the list, the visitor will be shown a box displaying
+    information about the chosen plant. Information displayed will come from another
+    database table and contains all the vital information on how, when and where to
+    grow said plant in an urban environment.
+  </p>
+
+  <p>
+    While the functionality of the site could easily expand, we're focusing right now
+    on answering one question very clearly: "What can I plant here in my new urban garden?"
+  </p>
+</section>
