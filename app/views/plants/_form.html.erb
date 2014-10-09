@@ -11,7 +11,8 @@
     </div>
   <% end %>
 
-  <%= f.file_field :avatar %>
+  <%= image_tag(@plant.image.url) if @plant.image? %>
+  <%= f.file_field :image, label:'Upload photo of plant (square image works best!)' %>
 
   <div class="field">
     <%= f.label :plant_name %><br>

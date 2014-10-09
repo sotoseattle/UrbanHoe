@@ -12,7 +12,7 @@ season: 'mid to late Summer',
 plant_size: 'pole beans grow up to 8 feet, bush beans 12 to 18 inches',
 minimum_soil_depth_inches: 6,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Purple podded Beans',
@@ -25,7 +25,7 @@ season: 'mid to late Summer',
 plant_size: 'pole beans grow up to 8 feet, bush beans 12 to 18 inches',
 minimum_soil_depth_inches: 6,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Italian Beans',
@@ -38,7 +38,7 @@ season: 'mid to late Summer',
 plant_size: 'pole beans grow up to 8 feet, bush beans 12 to 18 inches',
 minimum_soil_depth_inches: 6,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Lima Beans',
@@ -51,7 +51,7 @@ season: 'mid to late Summer',
 plant_size: 'pole beans grow up to 8 feet, bush beans 12 to 18 inches',
 minimum_soil_depth_inches: 6,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Beet',
@@ -64,7 +64,7 @@ season: 'early Summer, again in Fall',
 plant_size: '6 to 8 inches',
 minimum_soil_depth_inches: 6,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Carrot',
@@ -77,7 +77,7 @@ season: 'Summer through Fall',
 plant_size: '6 to 12 inches below and above ground',
 minimum_soil_depth_inches: 8,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Cucumber',
@@ -90,7 +90,7 @@ season: 'Summer',
 plant_size: '3 foot diameter for bush and 6 foot vine for pole',
 minimum_soil_depth_inches: 10,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Eggplant',
@@ -103,7 +103,7 @@ season: 'Late Summer',
 plant_size: '2 feet tall',
 minimum_soil_depth_inches: 10,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Kale',
@@ -116,7 +116,7 @@ season: 'Late Spring through Winter',
 plant_size: '4 to 24 inches',
 minimum_soil_depth_inches: 8,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Kale',
@@ -129,7 +129,7 @@ season: 'Late Spring through Winter',
 plant_size: '4 to 24 inches',
 minimum_soil_depth_inches: 8,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Swiss Chard',
@@ -142,7 +142,7 @@ season: 'Late Spring through Winter',
 plant_size: '4 to 24 inches',
 minimum_soil_depth_inches: 8,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Lettuce',
@@ -155,7 +155,7 @@ season: 'Spring through early Summer, again in Fall',
 plant_size: '8 to 10 inches',
 minimum_soil_depth_inches: 6,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Arugula',
@@ -168,7 +168,7 @@ season: 'Spring through early Summer, again in Fall',
 plant_size: '8 to 10 inches',
 minimum_soil_depth_inches: 6,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 Plant.create(plant_name: 'Sweet Pepper',
@@ -181,7 +181,7 @@ season: 'Late Summer',
 plant_size: '12 to 16 inches',
 minimum_soil_depth_inches: 8,
 grow_as: 'Annuals',
-avatar_file_name: '/public/images/bear.jpg',
+image: '/public/images/bear.jpg',
 family: 'Veggie')
 
 ##################### FRUITS #####################
@@ -198,7 +198,7 @@ family: 'Veggie')
     plant_size: "#{Random.new.rand(6..13)} inches",
     minimum_soil_depth_inches: Random.new.rand(1..13),
     grow_as: 'Annuals',
-    avatar_file_name: '/public/images/bear.jpg',
+    image: '/public/images/bear.jpg',
     family: 'Fruit'
   )
 end
@@ -217,7 +217,7 @@ end
     plant_size: "#{Random.new.rand(6..13)} inches",
     minimum_soil_depth_inches: Random.new.rand(1..13),
     grow_as: 'Annuals',
-    avatar_file_name: '/public/images/bear.jpg',
+    image: '/public/images/bear.jpg',
     family: 'Herb'
   )
 end
