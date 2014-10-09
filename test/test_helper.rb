@@ -6,7 +6,7 @@ require 'rails/test_help'
 require 'minitest/rails/capybara'
 require 'capybara/poltergeist'
 require 'capybara-extensions'
-# require 'pry-rescue/minitest'
+require 'pry-rescue/minitest'
 
 module ActiveSupport
   class TestCase

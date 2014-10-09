@@ -49,7 +49,6 @@ class PlantsController < ApplicationController
   end
 
   def plant_params
-    # params.require(:plant).permit(:plant_name, :instructions, :region, :season, :avatar_file_name, :image, :avatar_file_size, :avatar_content_type, :avatar_updated_at)
     params.require(:plant).permit(:plant_name, :instructions, :region, :season, :avatar)
   end
 

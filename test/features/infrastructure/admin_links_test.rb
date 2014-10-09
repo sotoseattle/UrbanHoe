@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 feature 'As an admin, when visiting the home page' do
   scenario 'I expect to see a link to add plants to the database' do

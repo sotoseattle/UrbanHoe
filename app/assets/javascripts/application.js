@@ -17,5 +17,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-sprockets
+//= require jquery.bootstrap-growl.min.js
 //= require_tree .
 
