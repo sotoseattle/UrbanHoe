@@ -89,6 +89,17 @@ body {
   height: 30px;
   padding-top: 20px;
   background-color: white;
+
+  .ff {
+    position: relative;
+    .f1 {
+      text-align: left;
+      font-size: 0.8em;
+    }
+    .f2 {
+      text-align: rigth;
+    }
+  }
 }
 
 /* Lighten admin sign-in link ---------------------*/
@@ -99,10 +110,25 @@ a.light-link {
 
 /* Background colors -------------------------*/
 
-
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
    background-color: #dbe5a1;
- }
+}
 
 
+
+
+
+
+.xx {
+
+
+  .yy {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  .z {
+    height: 100%;
+  }
+}
