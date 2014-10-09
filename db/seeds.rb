@@ -56,7 +56,7 @@ family: 'Veggie')
 
 Plant.create(plant_name: 'Beet',
 description: 'From one plant you get two crops: the round red root and the leaves above ground. Very young tender leaves are great for salads, and older leaves can be cooked like spinach',
-planting: 'Beets are cool season vegetables which means you can start early in spring and resow several times. To speed up germination soak seeds overnight then plant directly 1/2 inch deep and 1 inch apart. When seedlings are about 2 inches tall, thin away all but one in each cluster',
+planting: 'Beets are cool season vegetables which means you can start early in spring and resow several times. To speed up germination soak seeds overnight then plant directly 1/2 inch deep and 1 inch apart.',
 harvesting: 'Start harvesting the roots when they are about an inch in diameter. They are ready to eat when very small, but they also keep growing without loss of quality',
 varieties: 'Scarlet Supreme (50 days), Golden Beet (55 days), Detroit Dark Red (55 to 60 days)',
 region: '2, 3, 4, 5, 6, 7, 8, 9, 10, 11',
@@ -69,7 +69,7 @@ family: 'Veggie')
 
 Plant.create(plant_name: 'Carrot',
 description: 'people who think that a carrot is a carrot is a carrot will change their minds when they first taste one that is really fresh',
-planting: 'They germinate best when the soil is 70-80F but they can get started much sooner. Carrots don\'t transplant well so must be sown in place. The seeds are so small that you cannot but plant them very thickly, which means you\'ll have to do some serious thinning afterwards. Seed in a continuous row 1 inch deep',
+planting: 'They germinate best when the soil is 70-80F but they can get started much sooner. Carrots don\'t transplant well so must be sown in place. The seeds are so small that you cannot but plant them very thickly',
 harvesting: 'Start pulling them all as soon as you want. If you sow in summer and the carrots are still growing when the weather turns cool, you can leave them in place and have the fun of pulling fresh carrots at Thanksgiving',
 varieties: 'Thumbelina (60 days), Scarlet nantes (70 days), Little Fingers (65 days)',
 region: '3, 4, 5, 6, 7, 8, 9, 10',
@@ -82,8 +82,8 @@ family: 'Veggie')
 
 Plant.create(plant_name: 'Cucumber',
 description: 'Grow on vines and they take up lots of room, so beware!',
-planting: 'They are heat lovers and they won\'t germinate until the temperature hits 70F. For direct sowing, wait until the weather is really warm. Plant 6 to 8 seeds in a cluster about 1/2 inch deep, and thin as they pop up. Cucumbers grow very fast once they get started',
-harvesting: 'Pick cucumbers while they are small and tender or the vines will shut down (once they have achieved their reproductive goal). Therefore, be vigilant, in the height of summer the fruits grow astonishingly fast. If one gets away from you (i.e. yellow skin) remove and discard it',
+planting: 'They are heat lovers and they won\'t germinate until the temperature hits 70F. For direct sowing, wait until the weather is really warm. Plant 6 to 8 seeds in a cluster about 1/2 inch deep, and thin as they pop up. ',
+harvesting: 'Pick cucumbers while they are small and tender or the vines will shut down (once they have achieved their reproductive goal). Therefore, be vigilant, in the height of summer the fruits grow astonishingly fast.',
 varieties: 'Lemon (60 days), Suyo (62 days), Sweet Success (50 days)',
 region: '2, 3, 4, 5, 6',
 season: 'Summer',
