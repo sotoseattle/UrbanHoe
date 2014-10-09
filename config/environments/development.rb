@@ -37,11 +37,12 @@ Rails.application.configure do
 
   # devise requirement
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
+  config.action_mailer.asset_host = 'http://localhost:3000'
   # env for contact mailer
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
 
-    config.action_mailer.smtp_settings = {
+  config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
     domain: ENV["GMAIL_DOMAIN"],
@@ -49,7 +50,7 @@ Rails.application.configure do
     enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
-    }
+  }
 
 
 

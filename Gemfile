@@ -39,9 +39,9 @@ group :test do
   gem 'minitest-rails-capybara'
 end
 
-group :development, :test do
-  gem 'foreman'
-end
+# group :development, :test do
+#   gem 'foreman'
+# end
 
 group :production do
   gem 'pg'

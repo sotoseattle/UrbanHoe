@@ -4,8 +4,8 @@ class ContactMailer < ActionMailer::Base
     def new_contact(name, email, body)
         @name = name
         @email = email
-        @body = body`enter code here`
+        @body = body
 
-        mail(from: contact.email, subject: 'Contact Request')
+        mail(from: email, subject: 'Contact Request')
     end
 end

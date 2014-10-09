@@ -3,5 +3,5 @@ class Contact
 
   attribute :name
   attribute :email
-  attribute :comment
+  attribute :body
 end

@@ -23,7 +23,7 @@
             <%=f.input :name, label: "Name", :input_html => {:maxlength => 35, :size => 35} %>
             <%=f.input :email, label: "Email", :input_html => {:maxlength => 35, :size => 35} %>
             <%#f.input :subject, label: "Subject", :input_html => {:maxlength => 50, :size => 50} %>
-            <%= f.input :comment, as: :text, :input_html => { :rows => 10, class:"col-md-11"}, label: "Message"  %>
+            <%= f.input :body, as: :text, :input_html => { :rows => 10, class:"col-md-11"}, label: "Message"  %>
             <%= f.button :submit, "Send" %>
 
             <% end %>
