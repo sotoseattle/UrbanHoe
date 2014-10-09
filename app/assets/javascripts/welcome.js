@@ -8,14 +8,8 @@ var zip = {
       url: '/welcome/hardiness_region_for',
       type: 'get',
       data: {zipo: zipcode},
-      success: function(data){
-        $('#hardregion').text(data);
-        $('#hhregion').val(data);
-      },
-      error: function(){
-        $('#hardregion').text(0);
-        $('#hhregion').val('0');
-      }
+      success: function(data){ $('#hhregion').val(data) },
+      error: function(){ $('#hhregion').val('0') }
     })
   },
 
@@ -24,7 +18,6 @@ var zip = {
       zipcode = $('input#zipo').val();
       if (zip.is_valid(zipcode)) { zip.call_server_with_zipcode(zipcode) }
       else {
-        $('#hardregion').text(0)
         $('#hhregion').val('0');
       }
     })
@@ -72,8 +65,7 @@ $(function () {
   });
 
   $( ".target" ).change(function(event) {
-    if (this.id=='hardregion') { $('#hhregion').val(event.target.value) }
-    else { $('#hfamily').val(event.target.value) }
+    $('#hfamily').val(event.target.value)
   });
 })
 
