@@ -68,6 +68,3 @@ $(function () {
     $('#hfamily').val(event.target.value)
   });
 })
-
-
-
