@@ -9,3 +9,9 @@ feature 'Zipcode functionality' do
   #   page.find('#hhregion').text.must_equal ''
   # end
 end
+
+feature 'Zipcode functionality' do
+  scenario 'happy path' do
+
+  end
+end

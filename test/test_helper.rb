@@ -6,13 +6,14 @@ require 'rails/test_help'
 require 'minitest/rails/capybara'
 require 'capybara/poltergeist'
 require 'capybara-extensions'
-require 'pry-rescue/minitest'
+# require 'pry-rescue/minitest'
 
 module ActiveSupport
   class TestCase
     ActiveRecord::Migration.check_pending!
     fixtures :all
     Capybara.javascript_driver = :poltergeist
+    Capybara.default_driver = :poltergeist
 
     def sign_in
       visit '/'

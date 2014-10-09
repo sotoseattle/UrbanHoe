@@ -14,3 +14,11 @@ feature 'bootstrap framework activated' do
     page.has_css?('.col-md-12').must_equal true
   end
 end
+
+feature 'heroku framework up and running' do
+  scenario 'the site is live online' do
+    visit 'http://urbanhoe.herokuapp.com'
+    page.text.must_include 'Zipcode'
+    page.text.must_include 'Plant Name'
+  end
+end
