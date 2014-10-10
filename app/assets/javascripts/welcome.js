@@ -40,7 +40,7 @@ var zip = {
 
 function change_listener(){
   $(".target").change(function(event) {
-    $('#hfamily').val(event.target.value)
+    $('#hfamily').val(event.target.attributes.id.value)
   });
 }
 

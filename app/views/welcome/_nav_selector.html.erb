@@ -1,71 +1,68 @@
 <div class='row entry_form'>
   <div class='row'>
-    <p class='col-md-12' style="display: block-inline;">
-      <p class='col-md-4 left-side'>
-        <%=(image_tag ('/images/header-logo.png')) %>
-      </p>
-      <p class='col-md-4 right-side'>
-        <%=(image_tag ('/images/header-logo2.png')) %>
-      </p>
-    </p>
-    <p class='col-md-4' align='right'>
-      <%= link_to 'About', welcome_about_path %>
-    </p>
-  </div>
-</div>
-
-  <div class='navegar'>
-    <div class='col-md-4 top-bar xx' style=>
+    <div class='col-md-12' style="display: block-inline;">
       <div class='col-md-3 left-side'>
+        <%=(image_tag ('/images/urbanhoelogo.png')) %>
+      </div>
+      <div class='col-md-9 right-side' align='right'>
+        <%= link_to 'About', welcome_about_path %>
+      </div>
+    </div>
+  </div>
+<hr/>
+  <div class='navegar'>
+    <div class='col-md-3 top-bar anchored' style=>
+      <div class='col-md-4 left-side'>
         <%=(image_tag ('/images/header-1.png')) %>
       </div>
-
-      <div class='col-md-9 right-side xx' >
-        <!-- <span> Zipcode:</span> -->
-        <label for='zipo' class='col-md-4'>Zipcode</label>
-        <input type='text' id='zipo' class='col-md-4' value='zip' size=9/>
-        <input type='submit' class="col-md-4 btn btn-large btn-success" id='mysubmit1' value='Go' />
+      <div class='col-md-8 right-side' >
+        <br>
+        <input type="text" value='zip code' id='zipo'
+          onblur="if (this.value == '') {this.value = 'zip code';}"
+          onfocus="if (this.value == 'zip code') {this.value = '';}"
+          class='col-md-9 inbl' size=9 />
+        <input type='submit' class="col-md-3 btn btn-large btn-success inbl" id='mysubmit1' value='Go' />
       </div>
     </div>
-
-    <div class='col-md-4 top-bar'>
-      <div class='col-md-3 left-side'>
+    <div class='col-md-6 top-bar step_2'>
+      <div class='col-md-2 left-side'>
         <%=(image_tag ('/images/header-2.png'))%>
       </div>
-      <div class='col-md-9 right-side'>
-        <table>
-          <tr>
-            <td class='col-md-3'>
-              <%= label_tag(:family_all, 'All') %>
-              <p><%= radio_button_tag :family, 'All', radio_truthy('All'), class:'target' %></p>
-            </td>
-
-            <td class='col-md-3'>
-              <%= label_tag(:family_veggie, 'Veggie') %>
-              <p><%= radio_button_tag :family, 'Veggie', radio_truthy('Veggie'), class:'target' %></p>
-            </td>
-
-            <td class='col-md-3'>
-              <%= label_tag(:family_fruit, 'Fruit') %>
-              <p><%= radio_button_tag :family, 'Fruit', radio_truthy('Fruit'), class:'target' %></p>
-            </td>
-
-            <td class='col-md-3'>
-              <%= label_tag(:family_herb, 'Herb') %>
-              <p><%= radio_button_tag :family, 'Herb', radio_truthy('Herb'), class:'target' %></p>
-            </td>
-          </tr>
-        </table>
+      <br>
+      <div class='col-md-10 right-side input-group radbutton'>
+        <div class='input-group'>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='All' class='radio target' <%= radio_truthy('All') %> />
+            <label for='All'>All</label>
+          </span>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='Veggie' class='radio target' <%= radio_truthy('Veggie') %> />
+            <label for='Veggie'>Veggie</label>
+          </span>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='Fruit' class='radio target' <%= radio_truthy('Fruit') %> />
+            <label for='Fruit'>Fruit</label>
+          </span>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='Herb' class='radio target' <%= radio_truthy('Herb') %> />
+            <label for='Herb'>Herb</label>
+          </span>
+          </div>
       </div>
     </div>
-
-    <div class='col-md-4 top-bar'>
+    <div class='col-md-3 top-bar'>
       <%= form_tag(root_path, method: "get") do %>
-        <%=(image_tag ('/images/header-3.png'))%>
+        <div class='col-md-2 left-side'>
+          <%=(image_tag ('/images/header-3.png'))%>
+        </div>
         <%= hidden_field_tag(:hhregion, @reg) %>
         <%= hidden_field_tag(:hfamily, @fam) %>
-        <%= submit_tag("Dig") %>
+        <div class='col-md-10 right-side' align='center'>
+          <br>
+          <%= submit_tag('Dig It!', class:'btn btn-large btn-success') %>
+        </div>
       <% end %>
     </div>
   </div>
 </div>
+<hr/>

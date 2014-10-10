@@ -38,8 +38,14 @@
 
 .messages {
   margin: 0;
-  padding: 0;
+  padding-left: 2em;
   height: 0;
+  .notice {
+    color: #71b246;
+  }
+  .alert {
+    color: #fc7d02;
+  }
 }
 
 /* move all content away from left edge of browser window */
@@ -97,8 +103,11 @@ body {
   .ff {
     position: relative;
     .f1 {
+      padding-left: 0;
       text-align: left;
-      font-size: 0.8em;
+      span {
+        font-size: 0.8em;
+      }
     }
     .f2 {
       text-align: right;
@@ -112,27 +121,14 @@ a.light-link {
   color: #e1dddd;
 }
 
-/* Background colors -------------------------*/
+/* Background colors for table -------------------------*/
 
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
    background-color: #dbe5a1;
 }
 
-
-
-
-
-
-.xx {
-
-
-  .yy {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-  }
-  .z {
-    height: 100%;
-  }
+/* Login Form ---------------------------*/
+#login_form {
+  margin-left: 2em;
 }
