@@ -2,11 +2,16 @@ class WelcomeController < ApplicationController
   require 'open-uri'
 
   def index
+    @zip = params[:hzipcode] || 'zipcode'
     @fam = params[:hfamily] || 'All'
     @reg = params[:hhregion] || '0'
 
-    @plants = (@fam == 'All' ? Plant.all : Plant.where(family: @fam))
-    @plants = @plants.where('region LIKE ?', "% #{@reg}%") if @reg != '0'
+    if params.key?(:hfamily)
+      @plants = (@fam == 'All' ? Plant.all : Plant.where(family: @fam))
+      @plants = @plants.where('region LIKE ?', "% #{@reg}%") unless @reg == '0'
+    else
+      @plants = []
+    end
   end
 
   def about

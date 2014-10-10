@@ -8,19 +8,25 @@ var zip = {
     { type: 'info', align: 'right', width: 'auto' });
   },
 
+  set_hidden_fields: function(region, zipcode){
+    $('#hhregion').val(region);
+    $('#hzipcode').val(zipcode);
+  },
+
   call_server_with_zipcode: function(zipcode){
     $.ajax({
       url: '/welcome/hardiness_region_for',
       type: 'get',
       data: {zipo: zipcode},
       success: function(data){
+        zip.set_hidden_fields(data, zipcode);
         $.bootstrapGrowl('ZipCode corresponds to Hardiness Region: ' +
           data + '&nbsp;&nbsp;&nbsp;',
           { type: 'success', align: 'right', width: 'auto' });
-        $('#hhregion').val(data) },
+      },
       error: function(){
         zip.error_message();
-        $('#hhregion').val('0')
+        zip.set_hidden_fields('0', 'zipcode');
       }
     })
   },
@@ -32,7 +38,7 @@ var zip = {
         zip.call_server_with_zipcode(zipcode);
       } else {
         zip.error_message();
-        $('#hhregion').val('0');
+        zip.set_hidden_fields('0', 'zipcode');
       }
     })
   }
