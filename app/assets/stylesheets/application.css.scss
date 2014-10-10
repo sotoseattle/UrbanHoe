@@ -121,9 +121,14 @@ a.light-link {
   color: #e1dddd;
 }
 
-/* Background colors -------------------------*/
+/* Background colors for table -------------------------*/
 
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
    background-color: #dbe5a1;
+}
+
+/* Login Form ---------------------------*/
+#login_form {
+  margin-left: 2em;
 }
