@@ -11,7 +11,7 @@
   </div>
 <hr/>
   <div class='navegar'>
-    <div class='col-md-4 top-bar xx' style=>
+    <div class='col-md-4 top-bar anchored' style=>
       <div class='col-md-3 left-side'>
         <%=(image_tag ('/images/header-1.png')) %>
       </div>
@@ -20,38 +20,37 @@
         <input type="text" value='zip code' id='zipo'
           onblur="if (this.value == '') {this.value = 'zip code';}"
           onfocus="if (this.value == 'zip code') {this.value = '';}"
-          class='col-md-6 yy' size=9 />
-        <input type='submit' class="col-md-2 btn btn-large btn-success yy" id='mysubmit1' value='Go' />
+          class='col-md-6 inbl' size=9 />
+        <input type='submit' class="col-md-2 btn btn-large btn-success inbl" id='mysubmit1' value='Go' />
       </div>
     </div>
-    <div class='col-md-4 top-bar'>
+    <div class='col-md-5 top-bar step_2'>
       <div class='col-md-3 left-side'>
         <%=(image_tag ('/images/header-2.png'))%>
       </div>
-      <div class='col-md-9 right-side'>
-        <table>
-          <tr>
-            <td class='col-md-3'>
-              <%= label_tag(:family_all, 'All') %>
-              <p><%= radio_button_tag :family, 'All', radio_truthy('All'), class:'target' %></p>
-            </td>
-            <td class='col-md-3'>
-              <%= label_tag(:family_veggie, 'Veggie') %>
-              <p><%= radio_button_tag :family, 'Veggie', radio_truthy('Veggie'), class:'target' %></p>
-            </td>
-            <td class='col-md-3'>
-              <%= label_tag(:family_fruit, 'Fruit') %>
-              <p><%= radio_button_tag :family, 'Fruit', radio_truthy('Fruit'), class:'target' %></p>
-            </td>
-            <td class='col-md-3'>
-              <%= label_tag(:family_herb, 'Herb') %>
-              <p><%= radio_button_tag :family, 'Herb', radio_truthy('Herb'), class:'target' %></p>
-            </td>
-          </tr>
-        </table>
+      <br>
+      <div class='col-md-9 right-side input-group radbutton'>
+        <div class='input-group'>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='All' class='radio target' <%= radio_truthy('All') %> />
+            <label for='All'>All</label>
+          </span>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='Veggie' class='radio target' <%= radio_truthy('Veggie') %> />
+            <label for='Veggie'>Veggie</label>
+          </span>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='Fruit' class='radio target' <%= radio_truthy('Fruit') %> />
+            <label for='Fruit'>Fruit</label>
+          </span>
+          <span class='input-group-addon'>
+            <input type='radio' name='family' id='Herb' class='radio target' <%= radio_truthy('Herb') %> />
+            <label for='Herb'>Herb</label>
+          </span>
+          </div>
       </div>
     </div>
-    <div class='col-md-4 top-bar'>
+    <div class='col-md-3 top-bar'>
       <%= form_tag(root_path, method: "get") do %>
         <%=(image_tag ('/images/header-3.png'))%>
         <%= hidden_field_tag(:hhregion, @reg) %>
