@@ -10,14 +10,12 @@
 </head>
 <body>
   <div id="wrap">
-
-    <div class='messages'>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-
     <div>
       <%= yield %>
+    </div>
+    <div class='messages'>
+      <div class="notice"><%= notice %></div>
+      <div class="alert"><%= alert %></div>
     </div>
 
   </div> <!-- wrap -->
