@@ -105,7 +105,9 @@ body {
     .f1 {
       padding-left: 0;
       text-align: left;
-      font-size: 0.8em;
+      span {
+        font-size: 0.8em;
+      }
     }
     .f2 {
       text-align: right;
