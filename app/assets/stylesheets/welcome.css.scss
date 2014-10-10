@@ -10,6 +10,9 @@
   height: 100%;
   position: absolute;
   bottom: 0px;
+  .right-side{
+    padding-left: 20px;
+  }
 }
 
 .inbl {
@@ -21,6 +24,10 @@
 
 .radbutton {
   line-height: 2em;
+}
+
+div.input-group {
+  padding-left: 20px;
 }
 
 span.input-group-addon {

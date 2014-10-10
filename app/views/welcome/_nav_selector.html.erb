@@ -11,25 +11,25 @@
   </div>
 <hr/>
   <div class='navegar'>
-    <div class='col-md-4 top-bar anchored' style=>
-      <div class='col-md-3 left-side'>
+    <div class='col-md-3 top-bar anchored' style=>
+      <div class='col-md-4 left-side'>
         <%=(image_tag ('/images/header-1.png')) %>
       </div>
-      <div class='col-md-9 right-side' >
+      <div class='col-md-8 right-side' >
         <br>
         <input type="text" value='zip code' id='zipo'
           onblur="if (this.value == '') {this.value = 'zip code';}"
           onfocus="if (this.value == 'zip code') {this.value = '';}"
-          class='col-md-6 inbl' size=9 />
-        <input type='submit' class="col-md-2 btn btn-large btn-success inbl" id='mysubmit1' value='Go' />
+          class='col-md-9 inbl' size=9 />
+        <input type='submit' class="col-md-3 btn btn-large btn-success inbl" id='mysubmit1' value='Go' />
       </div>
     </div>
-    <div class='col-md-5 top-bar step_2'>
-      <div class='col-md-3 left-side'>
+    <div class='col-md-6 top-bar step_2'>
+      <div class='col-md-2 left-side'>
         <%=(image_tag ('/images/header-2.png'))%>
       </div>
       <br>
-      <div class='col-md-9 right-side input-group radbutton'>
+      <div class='col-md-10 right-side input-group radbutton'>
         <div class='input-group'>
           <span class='input-group-addon'>
             <input type='radio' name='family' id='All' class='radio target' <%= radio_truthy('All') %> />
@@ -52,11 +52,15 @@
     </div>
     <div class='col-md-3 top-bar'>
       <%= form_tag(root_path, method: "get") do %>
-        <%=(image_tag ('/images/header-3.png'))%>
+        <div class='col-md-2 left-side'>
+          <%=(image_tag ('/images/header-3.png'))%>
+        </div>
         <%= hidden_field_tag(:hhregion, @reg) %>
         <%= hidden_field_tag(:hfamily, @fam) %>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= submit_tag('Dig It!', class:'btn btn-large btn-success') %>
+        <div class='col-md-10 right-side' align='center'>
+          <br>
+          <%= submit_tag('Dig It!', class:'btn btn-large btn-success') %>
+        </div>
       <% end %>
     </div>
   </div>
