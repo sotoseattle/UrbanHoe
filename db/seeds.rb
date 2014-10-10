@@ -248,7 +248,7 @@ Plant.create(plant_name: 'Sweet Pepper',
 
 20.times do
   a = Random.new.rand(1..10)
-  Plant.create(plant_name: Faker::Lorem.word,
+  Plant.create(plant_name: Faker::Lorem.word.capitalize,
                description: Faker::Lorem.words(rand(5..15)).join(' '),
                planting: Faker::Lorem.words(rand(10..20)).join(' '),
                harvesting: Faker::Lorem.words(rand(10..20)).join(' '),
@@ -267,7 +267,7 @@ end
 
 20.times do
   a = Random.new.rand(1..10)
-  Plant.create(plant_name: Faker::Lorem.word,
+  Plant.create(plant_name: Faker::Lorem.word.capitalize,
                description: Faker::Lorem.words(rand(5..15)).join(' '),
                planting: Faker::Lorem.words(rand(10..20)).join(' '),
                harvesting: Faker::Lorem.words(rand(10..20)).join(' '),
