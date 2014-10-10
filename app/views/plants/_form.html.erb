@@ -13,68 +13,74 @@
 
   <%= image_tag(@plant.image.url) if @plant.image? %>
   <%= f.file_field :image, label:'Upload photo of plant (square image works best!)' %>
+  <section class="row">
+    <div class="field col-md-3">
+      <%= f.label :plant_name %><br>
+      <%= f.text_field :plant_name %>
+    </div>
 
-  <div class="field">
-    <%= f.label :plant_name %><br>
-    <%= f.text_field :plant_name %>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :region, 'Hardiness Region' %><br>
+      <%= f.text_field :region %>
+    </div>
 
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :season, 'When to Grow' %><br>
+      <%= f.text_field :season %>
+    </div>
 
-  <div class="field">
-    <%= f.label :region, 'Hardiness Region' %><br>
-    <%= f.text_field :region %>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :family %><br>
+      <select name="plant[family]">
+        <option value="Veggie">Veggie</option>
+        <option value="Fruit">Fruit</option>
+        <option value="Herb">Herb</option>
+      </select>
+    </div>
+  </section>
 
-  <div class="field">
-    <%= f.label :season, 'When to Grow' %><br>
-    <%= f.text_field :season %>
-  </div>
+ <section class="row">
+    <div class="field col-md-3">
+      <%= f.label :minimum_soil_depth_inches, 'Minimum soil depth (inches)' %><br>
+      <%= f.number_field :minimum_soil_depth_inches, in: 1...30 %>
+    </div>
 
-  <div class="field">
-    <%= f.label :planting, 'Planting Tips' %><br>
-    <%= f.text_field :planting %>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :plant_size %><br>
+      <%= f.text_field :plant_size %>
+    </div>
 
-  <div class="field">
-    <%= f.label :harvesting, 'Harvesting Tips' %><br>
-    <%= f.text_field :harvesting %>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :grow_as, 'Type' %><br>
+      <select name="plant[grow_as]">
+        <option value="Annual">Annual</option>
+        <option value="Perennial">Perennial</option>
+      </select>
+    </div>
 
-  <div class="field">
-    <%= f.label :varieties %><br>
-    <%= f.text_field :varieties %>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :varieties %><br>
+      <%= f.text_field :varieties %>
+    </div>
+  </section>
 
-  <div class="field">
-    <%= f.label :plant_size %><br>
-    <%= f.text_field :plant_size %>
-  </div>
+  <section class="row">
+    <div class="field col-md-3">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
 
-  <div class="field">
-    <%= f.label :minimum_soil_depth_inches, 'Minimum soil depth (inches)' %><br>
-    <%= f.number_field :minimum_soil_depth_inches, in: 1...30 %>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :planting, 'Planting Tips' %><br>
+      <%= f.text_field :planting %>
+    </div>
 
-  <div class="field">
-    <%= f.label :grow_as, 'Type' %><br>
-    <select name="plant[grow_as]">
-      <option value="Annual">Annual</option>
-      <option value="Perennial">Perennial</option>
-    </select>
-  </div>
+    <div class="field col-md-3">
+      <%= f.label :harvesting, 'Harvesting Tips' %><br>
+      <%= f.text_field :harvesting %>
+    </div>
+  </section>
 
-  <div class="field">
-    <%= f.label :family %><br>
-    <select name="plant[family]">
-      <option value="Veggie">Veggie</option>
-      <option value="Fruit">Fruit</option>
-      <option value="Herb">Herb</option>
-    </select>
-  </div>
 
   <div class="actions">
     <%= f.submit %>
