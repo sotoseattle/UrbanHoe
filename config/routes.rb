@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'plants/plant_details/:id', to: 'plants#plant_details'
   resources :plants
 
-  resource :image, :only => :new
+  resource :image, only: :new
 
   get 'welcome/about'
   get 'welcome/hardiness_region_for'

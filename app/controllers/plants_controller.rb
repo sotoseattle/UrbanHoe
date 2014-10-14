@@ -52,8 +52,8 @@ class PlantsController < ApplicationController
 
   def plant_params
     params.require(:plant).permit(:plant_name, :description, :region, :season,
-      :planting, :harvesting, :varieties, :plant_size,
-      :minimum_soil_depth_inches, :grow_as, :family, :key)
+                                  :planting, :harvesting, :varieties, :plant_size,
+                                  :minimum_soil_depth_inches, :grow_as, :family, :key)
   end
 
   def user_not_authorized
