@@ -11,8 +11,10 @@
     </div>
   <% end %>
 
-  <%= image_tag(@plant.image.url) if @plant.image? %>
-  <%= f.file_field :image, label:'Upload photo of plant (square image works best!)' %>
+  <%= link_to "Upload Image", new_image_path %>
+  <%= f.hidden_field :key, :value => @img_url %>
+  <br/>
+
   <section class="row">
     <div class="field col-md-3">
       <%= f.label :plant_name %><br>

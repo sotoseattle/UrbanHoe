@@ -11,6 +11,7 @@ class PlantsController < ApplicationController
 
   def new
     @plant = Plant.new
+    @img_url = params[:key]
   end
 
   def edit
@@ -18,6 +19,7 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.create(plant_params)
+    @plant.image.key = plant_params[:key]
     if @plant.save
       redirect_to @plant, notice: 'Plant was successfully created.'
     else
@@ -49,7 +51,9 @@ class PlantsController < ApplicationController
   end
 
   def plant_params
-    params.require(:plant).permit(:plant_name, :instructions, :region, :season, :image)
+    params.require(:plant).permit(:plant_name, :description, :region, :season,
+      :planting, :harvesting, :varieties, :plant_size,
+      :minimum_soil_depth_inches, :grow_as, :family, :key)
   end
 
   def user_not_authorized
