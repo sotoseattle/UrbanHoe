@@ -15,6 +15,7 @@ gem 'jquery-datatables-rails'
 gem 'jquery-ui-rails'
 gem 'mini_magick'
 gem 'nokogiri'
+gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
@@ -32,7 +33,6 @@ group :development do
   gem 'pry-rescue'
   gem 'rubocop'
   gem 'spring'
-  gem 'sqlite3'
 end
 
 group :test do
@@ -40,7 +40,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
