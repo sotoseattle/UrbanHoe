@@ -8,7 +8,7 @@
       </div>
     </div>
   </div>
-<article id="about_urbanhoe">
+<article id='about_urbanhoe'>
   <h3>About Us!</h3>
   </br>
   <section>
@@ -38,5 +38,55 @@
       While the functionality of the site could easily expand, we're focusing right now
       on answering one question very clearly: "What can I plant here in my new urban garden?"
     </p>
+  </section>
+</article>
+<article>
+  <section>
+    <h4 class='marginalized'>Who is behind Urbanhoe?</h4>
+    <div class='col-md-12' style="display: block-inline;">
+      <div class='col-md-4' align='center'>
+        <%=image_tag ('/images/ScottHale.png') %>
+        <br>
+        <br>
+        <strong>Scott Hale</strong>
+      </div>
+      <div class='col-md-4' align='center'>
+        <%=image_tag ('/images/ForrestParker.png') %>
+        <br>
+        <br>
+        <strong>Forrest Parker</strong>
+      </div>
+      <div class='col-md-4' align='center'>
+        <%=image_tag ('/images/JavierSoto.png') %>
+        <br>
+        <br>
+        <strong>Javier Soto</strong>
+      </div>
+    </div>
+    <br/>
+    <div class='col-md-12' style="display: block-inline;">
+      <div class='col-md-4 left-side'>
+        <p>
+        I am a web developer currently working in the Rails stack. My most recent web projecis ArtCaring.com - a site I built in Ruby on Rails that serves individuals anfamilies in health hardships through the power of fine art.
+
+        I am an independent fine artist, who's worked in oil and pastel painting for the pas11 years.
+        </p>
+        <p><%= mail_to 'scotthale12@gmail.com', 'Contact me' %></p>
+      </div>
+      <div class='col-md-4 left-side'>
+        <p>
+
+        </p>
+        <p><%= mail_to 'forresta.parker@gmail.com', 'Contact me' %></p>
+      </div>
+      <div class='col-md-4 left-side'>
+        <p>
+          I am a Spaniard starting a new life in Seattle doing what I am passionate about: transforming great ideas into self-sustaining businesses through the development of creative software.
+
+          I am a software developer focused on writing code that is clear and efficient.
+        </p>
+        <%= mail_to 'sotoseattle@gmail.com', 'Contact me' %>
+      </div>
+    </div>
   </section>
 </article>
