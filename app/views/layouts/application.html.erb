@@ -23,8 +23,12 @@
   <div id="footer">
     <div class="container-fluid row ff" align="left">
       <div class="col-md-4 f1">
-        <div>Have questions? Let us help:  <%= mail_to 'urbanhoe14@gmail.com', 'Email' %> </div>
-        <span class='tiny'>&copy; 2014, Urbanhoe LLC</span>
+        <div id='credits'>Coded by:
+          <%= link_to 'Scott Hale', 'http://www.scohale.com/' %>,
+          <%= mail_to 'forresta.parker@gmail.com', 'Forrest Parker' %> &
+          <%= link_to 'Javier Soto', 'http://www.sotoseattle.com' %>
+        </div>
+        <span class='tiny'>&copy; 2014, Hale, Forrest & Soto</span>
       </div>
       <div class="col-md-8 f2" align="right">
         <%= link_for_admins %>
