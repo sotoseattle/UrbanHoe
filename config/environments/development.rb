@@ -37,4 +37,7 @@ Rails.application.configure do
 
   # devise requirement
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # added with the heroku-forward gem to check on logs
+  config.middleware.use Rails::Rack::LogTailer
 end
