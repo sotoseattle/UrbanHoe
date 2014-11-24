@@ -14,21 +14,22 @@ var zip = {
   },
 
   call_server_with_zipcode: function(zipcode){
-    $.ajax({
-      url: '/welcome/hardiness_region_for',
-      type: 'get',
-      data: {zipo: zipcode},
-      success: function(data){
-        zip.set_hidden_fields(data, zipcode);
-        $.bootstrapGrowl('ZipCode corresponds to Hardiness Region: ' +
-          data + '&nbsp;&nbsp;&nbsp;',
-          { type: 'success', align: 'right', width: 'auto' });
-      },
-      error: function(){
-        zip.error_message();
-        zip.set_hidden_fields('0', 'zipcode');
-      }
-    })
+    // $.ajax({
+    //   url: '/welcome/hardiness_region_for',
+    //   type: 'get',
+    //   data: {zipo: zipcode},
+    //   success: function(data){
+    //     zip.set_hidden_fields(data, zipcode);
+    //     $.bootstrapGrowl('ZipCode corresponds to Hardiness Region: ' +
+    //       data + '&nbsp;&nbsp;&nbsp;',
+    //       { type: 'success', align: 'right', width: 'auto' });
+    //   },
+    //   error: function(){
+    //     zip.error_message();
+    //     zip.set_hidden_fields('0', 'zipcode');
+    //   }
+    // })
+    zip.set_hidden_fields('0', 'zipcode');
   },
 
   turn_on_form: function(){
