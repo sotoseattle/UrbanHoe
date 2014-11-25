@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009184536) do
+ActiveRecord::Schema.define(version: 20141013214654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20141009184536) do
     t.string   "grow_as"
     t.string   "family"
     t.string   "image"
+    t.boolean  "image_processed"
   end
 
   create_table "users", force: true do |t|
