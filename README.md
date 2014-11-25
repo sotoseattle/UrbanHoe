@@ -1,5 +1,3 @@
-[![Codeship Status for sotoseattle/UrbanHoe](https://www.codeship.io/projects/d0cd5d00-2ee9-0132-483c-7e53b330ae43/status)](https://www.codeship.io/projects/39433)
-
 # UrbanHoe
 * The "What-to-Grow-and-When-and-How" Site for Urban Gardeners
 
