@@ -87,7 +87,6 @@ body {
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
-  height: auto;
   /* Negative indent footer by its height */
   margin: 0 auto -60px;
   /* Pad bottom by footer height */
@@ -100,19 +99,19 @@ body {
   padding-top: 20px;
   background-color: white;
 
-  .ff {
-    position: relative;
-    .f1 {
-      padding-left: 0;
-      text-align: left;
-      span {
-        font-size: 0.8em;
-      }
-    }
-    .f2 {
-      text-align: right;
-    }
-  }
+  // .ff {
+  //   position: relative;
+  //   .f1 {
+  //     padding-left: 0;
+  //     text-align: left;
+  //     span {
+  //       font-size: 0.8em;
+  //     }
+  //   }
+  //   .f2 {
+  //     text-align: right;
+  //   }
+  // }
 }
 
 /* Lighten admin sign-in link ---------------------*/
